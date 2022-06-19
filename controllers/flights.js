@@ -1,5 +1,7 @@
 function newFlight(req, res) {
-  console.log('this works')
+  res.render("flights/new", {
+    title: "Add Flight",
+  })
 }
 
 export {
