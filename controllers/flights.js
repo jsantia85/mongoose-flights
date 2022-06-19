@@ -17,7 +17,13 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  console.log('this works')
+  Flight.find({})
+  .then(flights => {
+    res.render("flights/index", {
+      flights: flights,
+      title: "All Flights",
+    })
+  })
 }
 
 export {
