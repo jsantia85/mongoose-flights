@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="" method="">
+  <form id="new-form" action="/flights" method="POST">
     <label for="airline-input">Airline:</label>
     <select name="airline" id="airline-select">
       <option value="American">American</option>
@@ -11,17 +11,17 @@
       <option value="United">United</option>
     </select>
     <label for="airport-input">Airport:</label>
-    <select name="fligthNo" id="FlightNo-select">
+    <select name="airport" id="airport-select">
       <option value="AUS">AUS</option>
       <option value="DFW">DFW</option>
       <option value="DEN">DEN</option>
       <option value="LAX">LAX</option>
       <option value="SAN">SAN</option>
     </select>
-    <label for="flightNo-select">Flight Number:</label>
-    <input type="Number" name="Number" id="Number-input">
+    <label for="flightNo-select">Flight No:</label>
+    <input type="Number" name="flightNo" id="flightNo-input">
     <label for="departs-input">Departs:</label>
-    <input type="Date" name="Date" id="Date-input">
+    <input type="Date" name="departs" id="departs-input">
     <button type="submit">Add Flight</button>
   </form>
 </main>
