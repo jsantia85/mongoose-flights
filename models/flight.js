@@ -28,3 +28,10 @@ const flightSchema = new Schema({
 }, {
   timestamps: true
 })
+
+// Compile the schema into a model and export it
+const Flight = mongoose.model('Flight', flightSchema)
+
+export {
+  Flight,
+}
