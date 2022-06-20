@@ -1,7 +1,6 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/flights/index.css" />
 <%- include('../partials/nav') %>
-
 <main>
   <h1>Flights</h1>
   <table>
@@ -11,6 +10,7 @@
         <th>Airport</th>
         <th>FlightNo</th>
         <th>Departs</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +20,12 @@
           <td><%= flight.airport %></td>
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs %></td>
+          <td><a href="/flights/<%= flight._id %>">DETAILS</a></td>
+          <td>
+            <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
+              <button>X</button>
+            </form>
+          </td>
         </tr>
       <% }) %>
     </tbody>
