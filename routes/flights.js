@@ -11,11 +11,17 @@ router.get('/new', flightsCtrl.new)
 // GET -- localhost:3000/flights/:id
 router.get('/:id', flightsCtrl.show)
 
+// localhost:3000/movies/:id/edit
+router.get("/:id/edit", flightsCtrl.edit)
+
 //POST localhost:3000/flights
 router.post('/', flightsCtrl.create)
 
 // localhost:3000/flights/:id
 router.delete("/:id", flightsCtrl.delete)
+
+// localhost:3000/flights/:id
+router.put("/:id", flightsCtrl.update)
 
 export {
 	router
