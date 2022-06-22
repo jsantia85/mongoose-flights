@@ -13,7 +13,7 @@ function create(req, res) {
 	}
   Flight.create(req.body)
   .then(flight => {
-    res.redirect(`/flights`)
+    res.redirect(`/flights/${flight._id}`)
   })
   .catch(err => {
     res.redirect('/flights')
@@ -32,6 +32,7 @@ function index(req, res) {
 
 function show(req, res) {
   Flight.findById(req.params.id)
+  .populate('meals')
   .then(flight => {
     res.render('flights/show', { 
       title: 'Flight Detail', 
