@@ -8,12 +8,20 @@ function newMeal(req, res) {
       meals: meals,
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
 }
 
 function create(req, res) {
   Meal.create(req.body)
   .then(meal => { //meal not needed, but will be for React
     res.redirect('/meals/new')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
   })
 }
 

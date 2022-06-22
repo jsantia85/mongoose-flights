@@ -98,6 +98,10 @@ function createTicket(req, res) {
       res.redirect(`/flights/${flight._id}`)
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
 }
 
 function addToMeals(req, res) {
@@ -108,6 +112,10 @@ function addToMeals(req, res) {
 		.then(() => {
       res.redirect(`/flights/${flight._id}`)
 		})
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
   })
 }
 
