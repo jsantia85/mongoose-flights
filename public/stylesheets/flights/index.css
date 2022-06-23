@@ -4,7 +4,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid #2A272A;
 }
 
 table td {
@@ -19,15 +19,15 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #b8c0c2;
+  background-color: white;
   padding: 4px;
   text-decoration: none;
   font-size: 16px;
-  color: #424748;
+  color: #2A272A;
 }
 
 #list a:visited{
-  color: #424748;
+  color: #2A272A;
 }
 
 #list a:hover {
