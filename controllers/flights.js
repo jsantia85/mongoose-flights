@@ -2,8 +2,12 @@ import { Flight } from "../models/flight.js"
 import { Meal } from '../models/meal.js'
 
 function newFlight(req, res) {
-  res.render("flights/new", {
-    title: "Add Flight",
+  const newFlight = new Flight()
+  const dt = newFlight.departs
+  const oneYearFromNow = dt.toISOString().slice(0, 16)
+  res.render('flights/new', {
+    title: 'Add Flight',
+    oneYearFromNow
   })
 }
 
